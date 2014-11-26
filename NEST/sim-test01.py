@@ -1,5 +1,19 @@
 #!/usr/bin/python
+#
+# Author: TWC
+# Date:
+# Version:
+#
+# Function:
+# (1) NEST testing
+#
 
+import sys
+
+dir_nest = "/home/u863713/nest/lib/python2.7/site-packages/"
+
+## import nest and relevant modules
+sys.path.append(dir_nest)
 import nest
 import nest.voltage_trace
 import pylab

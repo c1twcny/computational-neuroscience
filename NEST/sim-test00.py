@@ -1,5 +1,15 @@
 #!/usr/bin/python
+#
+# Author: 
+# Date:
+# Version:
+#
+# Function:
+# NEST test code
+#
 
+import sys
+sys.path.append("/home/u863713/nest/lib/python2.7/site-packages/")
 import nest
 import nest.voltage_trace
 
@@ -17,7 +27,7 @@ nest.SetStatus(voltmeter, [{"to_file": True, "withtime": True}])
 nest.ConvergentConnect(noise, neuron, [1.2, -1.], [1.0, 1.0])
 nest.Connect(voltmeter, neuron)
 
-nest.Simulate(500.0)
+nest.Simulate(250.0)
 
 nest.voltage_trace.from_device(voltmeter)
 nest.voltage_trace.show()
